@@ -396,6 +396,8 @@ layout: null
                 {{ main_post.description }}
             </p>
             {% endif %}
+            {% assign before_svg = post.content | split: '<p>' | first %}
+                        <div class="excerpt spo">{{ before_svg }}</div>
         </div>
 
     </div>
@@ -404,7 +406,7 @@ layout: null
     <!-- Grid Posts -->
     <div class="home-featured-grid">
 
-        {% for post in site.categories.pisah01 limit:7 offset:1 %}
+        {% for post in site.categories.pisah01 limit:5 offset:1 %}
         <div class="home-grid-card">
 
             {% if post.image %}
